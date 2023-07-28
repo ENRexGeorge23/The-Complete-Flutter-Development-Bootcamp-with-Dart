@@ -8,7 +8,7 @@ class XylophoneApp extends StatelessWidget {
 
   void playSound(int soundNumber) {
     final player = AudioPlayer();
-    player.play('note$soundNumber.wav' as Source);
+    player.setSource(AssetSource('note$soundNumber.wav'));
   }
 
   Expanded buildKey({required Color color, required int soundNumber}) {
